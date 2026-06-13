@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Manrope:wght@200..800&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-on-secondary-fixed-variant: #802a0d;
+  --color-surface-container-lowest: #ffffff;
+  --color-on-tertiary-fixed-variant: #663e00;
+  --color-surface-container-highest: #e6e2d8;
+  --color-surface-variant: #e6e2d8;
+  --color-inverse-surface: #31312a;
+  --color-primary-container: #2d4b2a;
+  --color-secondary-fixed: #ffdbd0;
+  --color-surface-dim: #dddad0;
+  --color-on-surface-variant: #434840;
+  --color-on-primary-fixed-variant: #304e2d;
+  --color-on-tertiary-container: #e1a55f;
+  --color-on-primary: #ffffff;
+  --color-on-tertiary: #ffffff;
+  --color-on-secondary-fixed: #3a0a00;
+  --color-primary-fixed-dim: #add0a4;
+  --color-on-background: #1c1c16;
+  --color-secondary-container: #fd8864;
+  --color-on-error-container: #93000a;
+  --color-inverse-on-surface: #f4f0e7;
+  --color-on-primary-container: #98ba90;
+  --color-primary-fixed: #c8ecbf;
+  --color-on-surface: #1c1c16;
+  --color-secondary-fixed-dim: #ffb59f;
+  --color-error-container: #ffdad6;
+  --color-tertiary-fixed-dim: #f9bb72;
+  --color-surface-container-high: #ece8de;
+  --color-on-primary-fixed: #042105;
+  --color-on-secondary-container: #732104;
+  --color-secondary: #9f4122;
+  --color-surface: #fdf9ef;
+  --color-tertiary-fixed: #ffddb9;
+  --color-outline-variant: #c3c8bd;
+  --color-tertiary-container: #623b00;
+  --color-on-error: #ffffff;
+  --color-outline: #73796f;
+  --color-tertiary: #442700;
+  --color-surface-tint: #476642;
+  --color-surface-bright: #fdf9ef;
+  --color-error: #ba1a1a;
+  --color-inverse-primary: #add0a4;
+  --color-on-secondary: #ffffff;
+  --color-background: #fdf9ef;
+  --color-primary: #173416;
+  --color-surface-container-low: #f7f3e9;
+  --color-surface-container: #f1eee4;
+  --color-on-tertiary-fixed: #2b1700;
+
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer utilities {
+  .grid-pattern {
+    background-image: radial-gradient(circle, #73796f 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: 0.1;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom styles matching reference */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.tilt-card {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+.tilt-card:hover {
+  transform: translateY(-8px) rotate(-1deg);
+}
